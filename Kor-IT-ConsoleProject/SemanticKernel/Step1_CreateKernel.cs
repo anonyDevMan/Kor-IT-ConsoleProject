@@ -26,48 +26,48 @@ namespace Kor_IT_ConsoleProject.SemanticKernel
 
             try
             {
-                #region Step 1
+				#region Example 1
 
-                //var promptResult = await _kernel.InvokePromptAsync("What color is the sky?");
+				//var promptResult = await _kernel.InvokePromptAsync("What color is the sky?");
 
-                //Console.WriteLine(promptResult);
+				//Console.WriteLine(promptResult);
 
-                #endregion Step 1
+				#endregion
 
-                #region Step 2
+				#region Example 2
 
-                //KernelArguments kernelArguments = new KernelArguments() { { "topic", "sea" } };
-                //var promptResult = await _kernel.InvokePromptAsync("What color is the {{$topic}}? Please, answer is Korean.", kernelArguments);
+				//KernelArguments kernelArguments = new KernelArguments() { { "topic", "sea" } };
+				//var promptResult = await _kernel.InvokePromptAsync("What color is the {{$topic}}? Please, answer is Korean.", kernelArguments);
 
-                //Console.WriteLine(promptResult);
+				//Console.WriteLine(promptResult);
 
-                #endregion Step 2
+				#endregion
 
-                #region Step 3
+				#region Example 3
 
-                //KernelArguments kernelArguments = new KernelArguments() { { "topic", "sea" } };
+				//KernelArguments kernelArguments = new KernelArguments() { { "topic", "sea" } };
 
-                //await foreach(var stream in _kernel.InvokePromptStreamingAsync("What color is the {{$topic}}? Provide a detailed explantion. At least 500 characters. Please, answer is Korean.", kernelArguments))
-                //{
-                //    if (stream.Metadata["FinishReason"] is not null && stream.Metadata["FinishReason"].Equals("stop"))
-                //        Console.WriteLine();
-                //    else
-                //        Console.Write(stream);
-                //}
+				//await foreach(var stream in _kernel.InvokePromptStreamingAsync("What color is the {{$topic}}? Provide a detailed explantion. At least 500 characters. Please, answer is Korean.", kernelArguments))
+				//{
+				//    if (stream.Metadata["FinishReason"] is not null && stream.Metadata["FinishReason"].Equals("stop"))
+				//        Console.WriteLine();
+				//    else
+				//        Console.Write(stream);
+				//}
 
-                #endregion Step 3
+				#endregion
 
-                #region Step 4
+				#region Example 4
 
-                //KernelArguments kernelArguments = new KernelArguments(new OpenAIPromptExecutionSettings { MaxTokens = 500, Temperature = 0.5 }) { { "topic", "dog" } };
+				//KernelArguments kernelArguments = new KernelArguments(new OpenAIPromptExecutionSettings { MaxTokens = 500, Temperature = 0.5 }) { { "topic", "dog" } };
 
-                //var promptResult = await _kernel.InvokePromptAsync("Tell me story about {{$topic}}? Please, answer is Korean.", kernelArguments);
+				//var promptResult = await _kernel.InvokePromptAsync("Tell me story about {{$topic}}? Please, answer is Korean.", kernelArguments);
 
-                //Console.WriteLine(promptResult);
+				//Console.WriteLine(promptResult);
 
-                #endregion Step 4
-            }
-            catch (Exception ex)
+				#endregion
+			}
+			catch (Exception ex)
             {
             }
 

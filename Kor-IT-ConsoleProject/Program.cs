@@ -17,10 +17,11 @@ internal class Program
         services.Configure<LLMOption>(config.GetSection("LLMOptions"));
 
         services.AddTransient<Step1_CreateKernel>();
+        services.AddTransient<Step2_AddPlugins>();
 
         var serviceProvider = services.BuildServiceProvider();
 
-        var step1 = serviceProvider.GetService<Step1_CreateKernel>();
+        var step1 = serviceProvider.GetService<Step2_AddPlugins>();
 
         try
         {
