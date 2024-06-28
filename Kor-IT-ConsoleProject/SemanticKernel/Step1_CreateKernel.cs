@@ -5,8 +5,8 @@ using Microsoft.SemanticKernel.Connectors.OpenAI;
 
 namespace Kor_IT_ConsoleProject.SemanticKernel
 {
-    public class Step1_CreateKernel
-    {
+    public class Step1_CreateKernel : IStep
+	{
         private LLMOption _llmOption;
         private AzureOpenAIOption _azureOpenAIOption;
         private Kernel _kernel;

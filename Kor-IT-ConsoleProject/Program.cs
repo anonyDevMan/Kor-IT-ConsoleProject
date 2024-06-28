@@ -18,14 +18,17 @@ internal class Program
 
         services.AddTransient<Step1_CreateKernel>();
         services.AddTransient<Step2_AddPlugins>();
+        services.AddTransient<Step3_DependencyInjection>();
+        services.AddTransient<Step4_ChatPrompt>();
+        services.AddTransient<Step5_ResponsibleAI>();
 
         var serviceProvider = services.BuildServiceProvider();
 
-        var step1 = serviceProvider.GetService<Step2_AddPlugins>();
+        var service = serviceProvider.GetService<Step5_ResponsibleAI>();
 
         try
         {
-            Task.Run(async () => await step1.Call()).Wait();
+            Task.Run(async () => await service.Call()).Wait();
         }
         catch (Exception ex)
         {

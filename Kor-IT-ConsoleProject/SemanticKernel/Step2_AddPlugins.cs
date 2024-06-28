@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 
 namespace Kor_IT_ConsoleProject.SemanticKernel
 {
-	public class Step2_AddPlugins
+	public class Step2_AddPlugins : IStep
 	{
 		private LLMOption _llmOption;
 		private AzureOpenAIOption _azureOpenAIOption;
@@ -31,6 +31,7 @@ namespace Kor_IT_ConsoleProject.SemanticKernel
 			//_kernel = Kernel.CreateBuilder().AddAzureOpenAIChatCompletion(_azureOpenAIOption.DeployementName, _azureOpenAIOption.Endpoint, _azureOpenAIOption.Key).Build();
 
 			_kernel = kernelBuilder.Build();
+			
 		}
 
 		public async Task Call()
